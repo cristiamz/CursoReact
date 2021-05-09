@@ -106,8 +106,13 @@ pinguinosWithFavFood = pinguinosWithFavFood.map((pinguino, index) => ({
     canFly: pinguino.canFly,
     sayHello: pinguino.sayHello,
     numberOfFeet: pinguino.numberOfFeet,
-    favoriteFoods: pinguino.favoriteFoods.map((pinguino, index) => ({}))
+    favoriteFoods: pinguino.favoriteFoods.map(
+        (favFood, index) => {
+            return (index > 1) ? "Piñas" : favFood;
+        }
+    )
 }));
+console.log(pinguinosWithFavFood);
 
 console.log("");
 // Escriba un cilo for para recorrer cada comida en la propiedad de comida favorita de sus pingüinos e imprima cada una en la consola.
